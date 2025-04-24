@@ -55,28 +55,42 @@ document.addEventListener('DOMContentLoaded', function() {
     container.appendChild(table);
   }
   
-  // Función para insertar un nuevo estudiante (POST)
   function insertarEstudiante() {
     const cedula = document.getElementById('cedula').value;
     const nombre = document.getElementById('nombre').value;
+    const apellidoPaterno = document.getElementById('apellidoPaterno').value;
+    const apellidoMaterno = document.getElementById('apellidoMaterno').value;
     const correo = document.getElementById('correo').value;
     const telefono = document.getElementById('telefono').value;
+    const telefonoCelular = document.getElementById('telefonoCelular').value;
+    const fechaNacimiento = document.getElementById('fechaNacimiento').value;
+    const sexo = document.getElementById('sexo').value;
+    const direccion = document.getElementById('direccion').value;
+    const nacionalidad = document.getElementById('nacionalidad').value;
+    const idCarreras = document.getElementById('idCarreras').value;
+    const usuario = document.getElementById('usuario').value;
   
     const url = 'https://paginas-web-cr.com/Api/apis/InsertarEstudiantes.php';
   
     const datos = {
       cedula: cedula,
       nombre: nombre,
+      apellidopaterno: apellidoPaterno,
+      apellidomaterno: apellidoMaterno,
       correoelectronico: correo,
       telefono: telefono,
-      telefonoCelular: telefono // Se requiere este campo también
+      telefonocelular: telefonoCelular,
+      fechanacimiento: fechaNacimiento,
+      sexo: sexo,
+      direccion: direccion,
+      nacionalidad: nacionalidad,
+      idCarreras: idCarreras,
+      usuario: usuario
     };
   
     fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json' // Aquí está limpio, sin CORS proxy
-      },
+      
       body: JSON.stringify(datos)
     })
     .then(response => response.json())
@@ -84,9 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Respuesta del API:', data);
       alert('Estudiante agregado exitosamente');
       document.getElementById('formEstudiante').reset();
-      setTimeout(() => {
-        consultarEstudiantes();
-      }, 500);
+      consultarEstudiantes();
     })
     .catch(error => console.error('Error insertando estudiante:', error));
   }

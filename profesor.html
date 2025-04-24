@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profesores</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -12,7 +14,7 @@
   <header class="bg-primary text-white text-center py-3">
     <h1>Gestión de Profesores</h1>
   </header>
-
+  <div id="menuContainer"></div>
   <!-- Contenedor Principal -->
   <main class="container my-5">
     <h2>Lista de Profesores</h2>
@@ -20,42 +22,58 @@
     <!-- Aquí se carga la tabla -->
     <div id="profesoresContainer"></div>
 
-    <!-- Formulario para agregar profesores -->
-    <h3 class="mt-4">Agregar Profesor</h3>
     <form id="formProfesor">
-      <div class="mb-3">
-        <label for="cedula" class="form-label">Cédula</label>
-        <input type="text" class="form-control" id="cedula" required>
-      </div>
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" required>
-      </div>
-      <div class="mb-3">
-        <label for="apellidoPaterno" class="form-label">Apellido Paterno</label>
-        <input type="text" class="form-control" id="apellidoPaterno" required>
-      </div>
-      <div class="mb-3">
-        <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
-        <input type="text" class="form-control" id="apellidoMaterno" required>
-      </div>
-      <div class="mb-3">
-        <label for="correo" class="form-label">Correo Electrónico</label>
-        <input type="email" class="form-control" id="correo" required>
-      </div>
-      <div class="mb-3">
-        <label for="telefono" class="form-label">Teléfono</label>
-        <input type="text" class="form-control" id="telefono" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Agregar Profesor</button>
-    </form>
+        <label>Cédula</label>
+        <input type="text" id="cedula" required>
+      
+        <label>Nombre</label>
+        <input type="text" id="nombre" required>
+      
+        <label>Apellido Paterno</label>
+        <input type="text" id="apellidoPaterno" required>
+      
+        <label>Apellido Materno</label>
+        <input type="text" id="apellidoMaterno" required>
+      
+        <label>Correo Electrónico</label>
+        <input type="email" id="correo" required>
+      
+        <label>Teléfono</label>
+        <input type="text" id="telefono" required>
+      
+        <label>Fecha de Nacimiento</label>
+        <input type="date" id="fechanacimiento" required>
+      
+        <label>Sexo</label>
+        <select id="sexo" required>
+          <option value="">Seleccione</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+        </select>
+      
+        <label>Dirección</label>
+        <input type="text" id="direccion" required>
+      
+        <label>Carrera (ID)</label>
+        <input type="text" id="idCarreras" required>
+      
+        <label>Usuario</label>
+        <input type="text" id="usuario" required>
+      
+        <label>Nacionalidad</label>
+        <input type="text" id="nacionalidad" required>
+      
+        <button type="submit">Agregar Profesor</button>
+      </form>
+      
+      
   </main>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
   </footer>
-
+  <script src="js/menu.js" defer></script>
   <script src="js/profesor.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
