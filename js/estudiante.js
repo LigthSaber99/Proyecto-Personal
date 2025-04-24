@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Función para mostrar estudiantes en la tabla
-  function mostrarEstudiantes(estudiantes) {
+  function mostrarEstudiantes(estudiantes) {         
+    
     const container = document.getElementById('estudiantesContainer');
     container.innerHTML = ''; // Limpiar contenedor
   
