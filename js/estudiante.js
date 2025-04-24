@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const correo = document.getElementById('correo').value;
     const telefono = document.getElementById('telefono').value;
   
-    const url = 'https://corsproxy.io/?https://paginas-web-cr.com/Api/apis/InsertarEstudiantes.php';
+    const url = 'https://paginas-web-cr.com/Api/apis/InsertarEstudiantes.php';
+
 
 
 
