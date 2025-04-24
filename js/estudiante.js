@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Función para mostrar estudiantes en la tabla
-  function mostrarEstudiantes(estudiantes) {         
-    
+  function mostrarEstudiantes(estudiantes) {
     const container = document.getElementById('estudiantesContainer');
     container.innerHTML = ''; // Limpiar contenedor
   
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <tr>
             <td>${est.id}</td>
             <td>${est.nombre}</td>
-            <td>${est.correoelectronico}</td> <!-- Corregido -->
+            <td>${est.correoelectronico}</td>
             <td>${est.telefono}</td>
           </tr>
         `).join('')}
@@ -56,33 +55,27 @@ document.addEventListener('DOMContentLoaded', function() {
     container.appendChild(table);
   }
   
-  // Función para insertar un nuevo estudiante
-  function insertarEstudiante() { 
+  // Función para insertar un nuevo estudiante (POST)
+  function insertarEstudiante() {
     const cedula = document.getElementById('cedula').value;
     const nombre = document.getElementById('nombre').value;
     const correo = document.getElementById('correo').value;
     const telefono = document.getElementById('telefono').value;
   
     const url = 'https://paginas-web-cr.com/Api/apis/InsertarEstudiantes.php';
-
-
-
-
-
-
   
     const datos = {
       cedula: cedula,
       nombre: nombre,
       correoelectronico: correo,
       telefono: telefono,
-      telefonoCelular: telefono
+      telefonoCelular: telefono // Se requiere este campo también
     };
   
     fetch(url, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json' // <-- Aquí agregamos esto
+        'Content-Type': 'application/json' // Aquí está limpio, sin CORS proxy
       },
       body: JSON.stringify(datos)
     })
