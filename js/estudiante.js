@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
   
     const datos = {
       cedula: cedula,
