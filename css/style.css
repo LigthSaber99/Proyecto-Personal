@@ -70,4 +70,19 @@ body {
     height: 400px; /* Ajusta la altura fija */
     object-fit: cover; /* Hace que la imagen recorte bien sin deformarse */
   }
+  .card-custom {
+    height: 300px;            /* Altura fija para todas las cards */
+    display: flex;            /* Flexbox para alinear contenido */
+    flex-direction: column;   /* Organiza contenido en columna */
+    justify-content: space-between; /* Espacio entre elementos */
+  }
+  
+  .card-custom img {
+    height: 150px;            /* Tamaño fijo para las imágenes */
+    object-fit: cover;        /* Las recorta sin deformarlas */
+  }
+  
+  .card-custom .card-body {
+    flex-grow: 1;             /* Hace que el cuerpo de la card ocupe el espacio restante */
+  }
   
