@@ -56,13 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Función para insertar un nuevo estudiante
-  function insertarEstudiante() {
+  function insertarEstudiante() { 
     const cedula = document.getElementById('cedula').value;
     const nombre = document.getElementById('nombre').value;
     const correo = document.getElementById('correo').value;
     const telefono = document.getElementById('telefono').value;
   
-    const url = 'https://cors-anywhere.herokuapp.com/https://paginas-web-cr.com/Api/apis/InsertarEstudiantes.php';
+    const url = 'https://corsproxy.io/?https://paginas-web-cr.com/Api/apis/InsertarEstudiantes.php';
+
 
 
   
